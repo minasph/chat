@@ -1,0 +1,127 @@
+*  {
+    box-sizing: border-box;
+}
+
+:root {
+    --sand: #51504b;
+    --grass: #a6a89a;
+    --matcha: #c7c7bb;
+    --dusty-rose: #c18e7b;
+    --linen: #e3e4e0;
+
+    font-family: 'PT Sans', sans-serif;
+}
+html {
+    height: 100%;
+}
+
+.body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    max-height: 100vh;
+    margin: 0;
+}
+
+.header {
+    height: 50px;
+    background-color: var(--sand);
+    grid-area: header;
+    color: var(--linen);
+    font-size: 26px;
+    font-weight: 700;
+    padding: 10px;
+    flex: 0 0 auto;
+}
+
+.main {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 200px auto;
+}
+
+.user-list {
+    height: 100vh;
+    grid-area: users;
+    background-color: var(--matcha);
+    list-style-type: none;
+    padding: 0 10px 0 0;
+    margin: 0;
+    grid-column: 1/2;
+    overflow: auto;
+}
+
+.user-item {
+    border-radius: 7px;
+    padding: 20px 30px;
+    margin: 10px;
+    background-color: var(--linen);
+    font-size: 20px;
+}
+
+.user-item::before {
+    content: url("user.png");
+    margin-right: 10px;
+}
+
+.choosen_user_item {
+    background-color: var(--dusty-rose);
+    color: var(--linen);
+    font-weight: 700;
+}
+
+.chat {
+    flex: 1;
+    height: 100vh;
+    grid-area: chat;
+    background-color: var(--linen);
+    grid-column: 2/3;
+    overflow: auto;
+}
+
+.chat__text {
+    width: 300px;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    background-color: var(--grass);
+    font-size: 20px;
+}
+
+.my_text {
+    background-color: var(--dusty-rose);
+    position: relative;
+
+    color: var(--linen);
+}
+
+.footer {
+    height: 100px;
+    background-color: var(--sand);
+    flex: 0 0 auto;
+}
+
+.form__send{
+    display: flex;
+    justify-content: center;
+}
+
+.send_txt {
+    border: none;
+    background-color: var(--linen);
+    border-radius: 5px;
+    width: 700px;
+    height: 60px;
+    margin-top: 20px;
+}
+
+.send_btn {
+    border: none;
+    background-color: var(--dusty-rose);
+    border-radius: 5px;
+    width: 200px;
+    height: 60px;
+    margin-top: 20px;
+}
+
+
